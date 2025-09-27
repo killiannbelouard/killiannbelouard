@@ -35,6 +35,7 @@ Ce site peut être utilisé comme :
 
 Projet réalisé par Belouard Killiann et Granvallet Victor 
 
-##Site
--recettes.42web.io
 
+## Site
+
+-recettes.42web.io
