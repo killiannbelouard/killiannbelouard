@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Site Cuisine - Accueil</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.parallax .overlay {
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 30px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+#parallax1 { background-image: url('medias/fond3.jpg'); }
+#parallax2 { background-image: url('medias/fond4.jpg'); }
+
+section.content {
+    padding: 60px 20px;
+    background-color: #fffbe6;
+    text-align: center;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.lang-switch a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.lang-switch a:hover {
+    background-color: white;
+    color: #c0392b;
+}
+</style>
+</head>
+<body>
+
+<header id="parallax1" class="parallax">
+    <div class="overlay">
+        <h1>Bienvenue sur Mon Site Cuisine</h1>
+        <nav>
+            <ul>
+                <li><a href="acceuil.html">Accueil</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="acceuil-en.html">English</a>
+        </div>
+    </div>
+</header>
+
+<section class="content">
+    <h2>À propos de la cuisine</h2>
+    <p>Découvrez des recettes savoureuses, des images appétissantes et des vidéos inspirantes pour éveiller vos papilles !</p>
+</section>
+
+<header id="parallax2" class="parallax">
+    <div class="overlay">
+        <h1>Explorez nos recettes et galeries</h1>
+        <p>Des entrées aux desserts, chaque plat raconte une histoire gourmande.</p>
+    </div>
+</header>
+
+<section class="content">
+    <p>Plongez dans l'univers culinaire et laissez-vous inspirer par nos créations.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Mon Site Cuisine</p>
+</footer>
+
+</body>
+</html>

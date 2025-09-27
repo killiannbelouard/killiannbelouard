@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recettes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            background-image: url('medias/fond2.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header, footer {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 15px 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            color: #c0392b;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        nav ul li a:hover {
+            color: #c0392b;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-switch a {
+            color: #c0392b;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #c0392b;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .lang-switch a:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+        .carousel-container {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 5;
+        }
+        .carousel-rotate img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        section.content.recette {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 900px;
+            margin: 40px auto 80px auto;
+            padding: 30px 20px 50px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            line-height: 1.6;
+            color: #333;
+            position: relative;
+            z-index: 10;
+        }
+        section.recette h2 {
+            color: #c0392b;
+            border-bottom: 2px solid #c0392b;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        section.recette p {
+            margin-bottom: 15px;
+        }
+        section.recette p strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 6px;
+            color: #444;
+        }
+        .recette-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+        .ingredients, .preparation {
+            flex: 1 1 300px;
+            min-width: 280px;
+        }
+        .ingredients ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .recette-item {
+                flex-direction: column;
+            }
+        }
+        .carousel-container { width: 420px; height: 420px; perspective: 1000px; margin: 40px auto;}
+        .carousel-rotate { width:100%; height:100%; position:relative; transform-style:preserve-3d; animation: rotateCarousel 16s linear infinite;}
+        .carousel-rotate img { position:absolute; width:220px; height:150px; border-radius:12px; top:50%; left:50%; margin:-75px -110px; object-fit:cover; transition:transform 0.5s;}
+        .carousel-rotate img:nth-child(1) { transform: rotateY(0deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(2) { transform: rotateY(60deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(3) { transform: rotateY(120deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(4) { transform: rotateY(180deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(5) { transform: rotateY(240deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(6) { transform: rotateY(300deg) translateZ(320px); }
+        @keyframes rotateCarousel { from{ transform: rotateY(0deg);} to{ transform: rotateY(-360deg);} }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nos Recettes</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recettes.html">Recettes</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="lang-switch">
+        <a href="recettes-en.html">English</a>
+    </div>
+</header>
+
+<section class="carousel-container">
+    <div class="carousel-rotate">
+        <img src="medias/magret.jpeg" alt="Magret de canard" />
+        <img src="medias/pizza.jpg" alt="Pizza pepperoni" />
+        <img src="medias/pomme.jpg" alt="Tarte aux pommes" />
+        <img src="medias/salade.jpg" alt="Salade César" />
+        <img src="medias/oeuf.jpg" alt="Œuf mimosa" />
+        <img src="medias/chocolat.jpeg" alt="Mousse au chocolat" />
+    </div>
+</section>
+
+<section class="content recette">
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Magrets de canard au miel</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>2 magrets de canard</li>
+                <li>6 échalotes</li>
+                <li>10 cl de vinaigre balsamique</li>
+                <li>1 c. à soupe de miel</li>
+                <li>Sel, poivre</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>
+                Préparer les magrets : ôter l’excès de gras mais laisser la graisse du canard sur le dessus. Faire des entailles en forme de croisillons dans la peau du canard jusqu’à la chair. Saler et poivrer.
+            </p>
+            <p>
+                Faire chauffer une poêle antiadhésive sans matière grasse. Déposer les magrets côté peau. Cuire entre 5 et 10 min en arrosant la chair avec le gras fondu du magret de canard. Retirer les magrets. Enlever l’excès de graisse et remettre le canard dans la poêle, côté chair cette fois-ci. Poursuivre la cuisson du magret pendant 5 min environ. Retirer du feu et réserver au chaud.
+            </p>
+            <p>
+                Dans la même poêle, faire revenir les échalotes pelées et hachées. Déglacer au vinaigre balsamique. À l’aide d’une spatule en bois, gratter bien les sucs de cuisson dans le fond de la poêle. Ajouter le miel et porter 1 min à ébullition. Découper les magrets de canard poêlés en tranches et napper de sauce. Servir accompagné des pâtes fraîches.
+            </p>
+        </div>
+    </article>
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Pizza pepperoni</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>Tranches de pepperoni (150 g)</li>
+                <li>Mozzarella di Bufala (2 pièces)</li>
+                <li>Purée de tomate fraîche (200 g)</li>
+                <li>Oignon blanc (1 pièce)</li>
+                <li>Gousses d'ail (2 pièces)</li>
+                <li>Huile d'olive (1 c. à soupe)</li>
+                <li>Basilic (0.5 botte)</li>
+                <li>Rouleau de pâte à pizza (1 pièce)</li>
+                <li>Sel fin (3 pincées)</li>
+                <li>Moulin à poivre (3 tours)</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>Préchauffer le four à 250 °C.</p>
+            <p>Eplucher l'oignon et l'ail, faire suer dans un peu d'huile d'olive, saler, poivrer et débarrasser dans la cuve du blender.</p>
+            <p>Ajouter la purée de tomates et quelques feuilles de basilic. Mixer pour obtenir une sauce lisse. Débarrasser.</p>
+            <p>Égoutter les boules de mozzarella et les couper en tranches.</p>
+            <p>Étaler la pâte à pizza sur une plaque allant au four. Répartir ensuite la sauce tomate sur une épaisseur de quelques millimètres, disposer les tranches de mozzarella.</p>
+            <p>Enfourner pendant 8 min. Sortir la pizza du four, déposer les tranches de pepperoni sur toute la surface et remettre au four 2 minutes.</p>
+            <p>Décorer de basilic frais et déguster chaud.</p>
+        </div>
+    </article>
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Tarte aux pommes</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>250 g de farine</li>
+                <li>125 g de beurre Bleu-Blanc-Cœur</li>
+                <li>1 œuf Bleu-Blanc-Cœur</li>
+                <li>3 grosses pommes bio</li>
+                <li>100 g de poudre d’amandes</li>
+                <li>Sirop d’érable</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>Préparer la pâte au robot pâtissier avec la farine, le sucre, le beurre fondu et l’œuf.</p>
+            <p>Laisser reposer 1h puis étaler la pâte sur une feuille de papier sulfurisé que l’on dépose ensuite dans un plat à tarte.</p>
+            <p>Verser la poudre d’amandes sur le fond de tarte.</p>
+            <p>Couper les pommes puis disposer les morceaux sur la tarte.</p>
+            <p>Cuisson 30 min à 180°C au four, puis napper avec un peu de sirop d’érable. Laisser cuire à nouveau 5 min au four.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Œufs mimosa</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>6 œufs</li>
+                <li>3 c. à soupe de mayonnaise</li>
+                <li>1 c. à café de moutarde</li>
+                <li>Sel, poivre</li>
+                <li>Ciboulette pour la décoration</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>Cuire les œufs 10 minutes dans l'eau bouillante. Refroidir, écaler et couper en deux.</p>
+            <p>Retirer les jaunes et les écraser avec la mayonnaise, la moutarde, sel et poivre.</p>
+            <p>Remplir les demi-blancs avec la préparation, saupoudrer de ciboulette. Servir frais.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Salade César</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>1 cœur de laitue romaine</li>
+                <li>150 g de filets de poulet (ou croûtons si végétarien)</li>
+                <li>Parmesan râpé</li>
+                <li>3 c. à soupe de mayonnaise</li>
+                <li>1 c. à soupe de jus de citron</li>
+                <li>1 gousse d'ail</li>
+                <li>Sel, poivre</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>Griller les filets de poulet, couper en lanières. Laver et sécher la laitue romaine.</p>
+            <p>Préparer la sauce : mélanger mayonnaise, jus de citron, ail pressé, sel et poivre.</p>
+            <p>Assembler la salade avec la laitue, le poulet, des copeaux de parmesan et arroser de sauce. Ajouter des croûtons si désiré.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Mousse au chocolat</h2>
+            <strong>Ingrédients :</strong>
+            <ul>
+                <li>200 g de chocolat noir</li>
+                <li>4 œufs (séparer blancs et jaunes)</li>
+                <li>30 g de sucre (optionnel)</li>
+                <li>Une pincée de sel</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Préparation :</strong>
+            <p>Faire fondre le chocolat au bain-marie. Laisser tiédir. Mélanger les jaunes d'œufs au chocolat fondu.</p>
+            <p>Monter les blancs en neige avec la pincée de sel. Incorporer délicatement les blancs au mélange chocolaté.</p>
+            <p>Répartir dans des ramequins et laisser reposer au frais au moins 2 heures avant de servir.</p>
+        </div>
+    </article>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Mon Site Cuisine</p>
+</footer>
+
+</body>
+</html>

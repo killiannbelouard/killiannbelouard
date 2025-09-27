@@ -1,0 +1,301 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fffbe6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header.parallax {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .parallax .overlay {
+        padding: 30px 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .media-gallery img,
+    .media-gallery video {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    video {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 300px;
+    }
+    .carousel-rotate {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-rotate img {
+        width: 150px;
+        height: 97.5px; 
+        margin: -48.75px -75px;
+    }
+    .carousel-rotate img:nth-child(1) {
+        transform: rotateY(0deg) translateZ(200px);
+    }
+    .carousel-rotate img:nth-child(2) {
+        transform: rotateY(120deg) translateZ(200px);
+    }
+    .carousel-rotate img:nth-child(3) {
+        transform: rotateY(240deg) translateZ(200px);
+    }
+
+    .recette-item {
+        flex-direction: column;
+    }
+}
+
+
+header {
+    background-color: #c0392b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+footer {
+    background-color: #c0392b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+header.parallax {
+    position: relative;
+    height: 100vh;
+    background-image: url('medias/fond3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.parallax .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 30px;
+    border-radius: 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+input, textarea, button {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #962d22;
+}
+
+
+.media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.media-gallery img, .media-gallery video {
+    max-width: 300px;
+    border: 2px solid #c0392b;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    perspective: 1000px; 
+}
+
+.carousel-rotate {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 12s linear infinite;
+}
+
+.carousel-rotate img {
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    margin: -65px -100px; 
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+
+.carousel-rotate img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+.carousel-rotate img:nth-child(2) {
+    transform: rotateY(120deg) translateZ(300px);
+}
+.carousel-rotate img:nth-child(3) {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+@media (max-width: 900px) {
+  
+  nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    padding: 10px 12px;
+    font-size: 1rem;
+    display: inline-block;
+  }
+
+  header.parallax,
+  .parallax {
+    background-attachment: scroll !important;
+    height: 60vh !important;
+  }
+  .parallax .overlay {
+    padding: 20px 14px !important;
+    font-size: 0.95rem;
+  }
+
+  form {
+    max-width: 92% !important;
+    margin: 20px auto !important;
+    padding: 18px !important;
+  }
+  input, textarea, button {
+    width: 100% !important;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .carousel-container { width: 100% !important; height: 300px !important; }
+  .carousel-rotate img {
+    width: 160px !important;
+    height: 100px !important;
+    margin: -50px -80px !important;
+  }
+  .carousel-rotate img:nth-child(1){ transform: rotateY(0deg) translateZ(200px) !important; }
+  .carousel-rotate img:nth-child(2){ transform: rotateY(60deg) translateZ(200px) !important; }
+  .carousel-rotate img:nth-child(3){ transform: rotateY(120deg) translateZ(200px) !important; }
+  .carousel-rotate img:nth-child(4){ transform: rotateY(180deg) translateZ(200px) !important; }
+  .carousel-rotate img:nth-child(5){ transform: rotateY(240deg) translateZ(200px) !important; }
+  .carousel-rotate img:nth-child(6){ transform: rotateY(300deg) translateZ(200px) !important; }
+}
+
+@media (max-width: 420px) {
+  .lang-switch a {
+    padding: 6px 8px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.content {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}

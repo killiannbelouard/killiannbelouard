@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #c0392b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        main.content {
+            max-width: 500px;
+            margin: 50px auto 80px;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 12px 15px;
+            border: 1.8px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #c0392b;
+            outline: none;
+            box-shadow: 0 0 8px rgba(192, 57, 43, 0.3);
+        }
+
+        textarea {
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        button[type="submit"] {
+            margin-top: 25px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e74c3c;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        
+        @media (max-width: 600px) {
+            main.content {
+                margin: 20px;
+                padding: 25px 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+        }
+
+        
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-switch a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .lang-switch a:hover {
+            background-color: white;
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+    <nav>
+        <ul>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="recettes-en.html">Recipes</a></li>
+            <li><a href="galerie-en.html">Gallery</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="lang-switch">
+        <a href="contact.html">Français</a>
+    </div>
+</header>
+
+<main class="content">
+    <form action="index-en.html" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Cooking Site</p>
+</footer>
+
+</body>
+</html>

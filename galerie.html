@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie — Mon Site Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root{
+            --accent:#c0392b;
+            --bg-card: rgba(255,255,255,0.95);
+            --muted:#666;
+            --radius:12px;
+        }
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            color:#222;
+            background: url('medias/fond5.jpg') center/cover fixed no-repeat;
+            background-blend-mode: multiply;
+        }
+        body::before{
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.22);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header{
+            background-color: var(--accent);
+            color:white;
+            padding:20px 16px;
+            text-align:center;
+            position:relative;
+            z-index: 2;
+        }
+        header h1{margin:0;font-size:1.6rem;}
+        nav ul{list-style:none;padding:0;margin:12px 0 0;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+        nav a{color:white;text-decoration:none;font-weight:600}
+        .lang-switch{position:absolute;top:18px;right:18px}
+        .lang-switch a{color:white;text-decoration:none;border:2px solid white;padding:6px 10px;border-radius:8px;font-weight:700}
+        main.container{
+            max-width:1100px;
+            margin:34px auto;
+            padding:0 16px 40px;
+            position:relative;
+            z-index: 2; 
+        }
+
+        section.gallery-section{
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding:20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            margin-bottom:28px;
+            overflow:hidden;
+        }
+        section.gallery-section h2{
+            color:var(--accent);
+            margin:6px 0 14px;
+            font-size:1.25rem;
+        }
+        .section-intro{color:var(--muted);margin-bottom:12px}
+
+        .cards{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:16px;
+        }
+        .card{
+            background:white;
+            border-radius:10px;
+            padding:12px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            align-items:stretch;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+        }
+        .media-row{
+            display:flex;
+            gap:10px;
+            align-items:flex-start;
+            justify-content:space-between;
+        }
+        .media-row img, .media-row video{
+            width:calc(50% - 5px);
+            height:180px;
+            object-fit:cover;
+            border-radius:8px;
+            border:2px solid var(--accent);
+        }
+        .card h3{margin:0;font-size:1.05rem;color:#222}
+        .card p{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+        .caption{font-size:0.9rem;color:#444;margin-top:6px;text-align:center}
+
+        footer{
+            text-align:center;padding:18px 8px;background:#f5f5f5;color:#666;border-top:1px solid #eee;
+            position:relative;
+            z-index: 2;
+        }
+
+        @media (max-width:900px){
+            .cards{grid-template-columns: 1fr;}
+            .media-row img, .media-row video{width:100%;height:220px}
+            .media-row{flex-direction:column}
+        }
+        @media (max-width:420px){
+            .media-row img, .media-row video{height:180px}
+            header h1{font-size:1.2rem}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galerie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch"><a href="galerie-en.html">English</a></div>
+    </header>
+
+    <main class="container">
+
+        <section class="gallery-section" id="entrees">
+            <h2>Entrées</h2>
+            <div class="section-intro">Deux entrées fraîches et rapides — image et vidéo pour chaque recette.</div>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Salade César</h3>
+                    <div class="media-row">
+                        <img src="medias/salade.jpg" alt="Salade César">
+                        <video controls preload="metadata">
+                            <source src="medias/salade.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Salade César — laitue romaine, parmesan et vinaigrette crémeuse.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Œufs mimosa</h3>
+                    <div class="media-row">
+                        <img src="medias/oeuf.jpg" alt="Œuf mimosa">
+                        <video controls preload="metadata">
+                            <source src="medias/oeuf.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Œufs mimosa — classiques et parfaits en entrée froide.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="plats">
+            <h2>Plats</h2>
+            <div class="section-intro">Plats généreux — image et vidéo pour se donner envie.</div>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Pizza</h3>
+                    <div class="media-row">
+                        <img src="medias/pizza.jpg" alt="Pizza">
+                        <video controls preload="metadata">
+                            <source src="medias/pizza.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Pizza croustillante — mozzarella et pepperoni.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Magret de canard</h3>
+                    <div class="media-row">
+                        <img src="medias/magret.jpeg" alt="Magret de canard">
+                        <video controls preload="metadata">
+                            <source src="medias/magret.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Magret poêlé au miel — cuisson dorée et sauce réduite.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="desserts">
+            <h2>Desserts</h2>
+            <div class="section-intro">Finissez sur une note sucrée — image et vidéo pour chaque dessert.</div>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Tarte aux pommes</h3>
+                    <div class="media-row">
+                        <img src="medias/pomme.jpg" alt="Tarte aux pommes">
+                        <video controls preload="metadata">
+                            <source src="medias/pomme.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Tarte aux pommes maison, nappée de sirop d'érable.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Mousse au chocolat</h3>
+                    <div class="media-row">
+                        <img src="medias/chocolat.jpeg" alt="Mousse au chocolat">
+                        <video controls preload="metadata">
+                            <source src="medias/chocolat.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                    </div>
+                    <p class="caption">Mousse au chocolat onctueuse — le classique réconfortant.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Site Cuisine</p>
+    </footer>
+</body>
+</html>

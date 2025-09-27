@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            background-image: url('medias/fond2.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header, footer {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 15px 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            color: #c0392b;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        nav ul li a:hover {
+            color: #c0392b;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-switch a {
+            color: #c0392b;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #c0392b;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .lang-switch a:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+        .carousel-container {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 5;
+        }
+        .carousel-rotate img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        section.content.recette {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 900px;
+            margin: 40px auto 80px auto;
+            padding: 30px 20px 50px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            line-height: 1.6;
+            color: #333;
+            position: relative;
+            z-index: 10;
+        }
+        .recette-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+        .ingredients, .preparation {
+            flex: 1 1 300px;
+            min-width: 280px;
+        }
+        .ingredients ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .carousel-container { width: 420px; height: 420px; perspective: 1000px; margin: 40px auto;}
+        .carousel-rotate { width:100%; height:100%; position:relative; transform-style:preserve-3d; animation: rotateCarousel 16s linear infinite;}
+        .carousel-rotate img { position:absolute; width:220px; height:150px; border-radius:12px; top:50%; left:50%; margin:-75px -110px; object-fit:cover; transition:transform 0.5s;}
+        .carousel-rotate img:nth-child(1) { transform: rotateY(0deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(2) { transform: rotateY(60deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(3) { transform: rotateY(120deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(4) { transform: rotateY(180deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(5) { transform: rotateY(240deg) translateZ(320px); }
+        .carousel-rotate img:nth-child(6) { transform: rotateY(300deg) translateZ(320px); }
+        @keyframes rotateCarousel { from{ transform: rotateY(0deg);} to{ transform: rotateY(-360deg);} }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Recipes</h1>
+    <nav>
+        <ul>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="recettes-en.html">Recipes</a></li>
+            <li><a href="galerie-en.html">Gallery</a></li>
+            <li><a href="contact-en.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="lang-switch">
+        <a href="recettes.html">Français</a>
+    </div>
+</header>
+
+<section class="carousel-container">
+    <div class="carousel-rotate">
+        <img src="medias/magret.jpeg" alt="Duck breast" />
+        <img src="medias/pizza.jpg" alt="Pepperoni pizza" />
+        <img src="medias/pomme.jpg" alt="Apple tart" />
+        <img src="medias/salade.jpg" alt="Caesar salad" />
+        <img src="medias/oeuf.jpg" alt="Deviled eggs" />
+        <img src="medias/chocolat.jpeg" alt="Chocolate mousse" />
+    </div>
+</section>
+
+<section class="content recette">
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Duck Breasts with Honey</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>2 duck breasts</li>
+                <li>6 shallots</li>
+                <li>10 cl balsamic vinegar</li>
+                <li>1 tbsp honey</li>
+                <li>Salt, pepper</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>
+                Prepare the duck breasts: remove excess fat but keep the skin. Make criss-cross cuts in the skin down to the flesh. Season with salt and pepper.
+            </p>
+            <p>
+                Heat a non-stick pan without fat. Place the breasts skin side down. Cook 5–10 minutes, basting with the rendered fat. Remove the breasts. Drain excess fat and return the duck to the pan, flesh side down, and cook about 5 more minutes. Remove and keep warm.
+            </p>
+            <p>
+                In the same pan, sauté peeled and chopped shallots. Deglaze with balsamic vinegar, scrape up the cooking juices, add honey and bring to a boil for 1 minute. Slice the duck and coat with the sauce. Serve with fresh pasta.
+            </p>
+        </div>
+    </article>
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Pepperoni Pizza</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>150 g pepperoni slices</li>
+                <li>2 Mozzarella di Bufala</li>
+                <li>200 g fresh tomato purée</li>
+                <li>1 white onion</li>
+                <li>2 garlic cloves</li>
+                <li>1 tbsp olive oil</li>
+                <li>½ bunch basil</li>
+                <li>1 pizza dough</li>
+                <li>Salt</li>
+                <li>Black pepper</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>Preheat the oven to 250°C.</p>
+            <p>Sauté the onion and garlic in olive oil, season, then put into a blender.</p>
+            <p>Add the tomato purée and some basil leaves. Blend until smooth.</p>
+            <p>Drain the mozzarella and slice it.</p>
+            <p>Roll out the dough on a baking tray, spread a thin layer of tomato sauce and place mozzarella slices.</p>
+            <p>Bake for 8 minutes. Remove, add pepperoni slices, then bake 2 more minutes.</p>
+            <p>Finish with fresh basil and serve hot.</p>
+        </div>
+    </article>
+
+    
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Apple Tart</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>250 g flour</li>
+                <li>125 g butter</li>
+                <li>1 egg</li>
+                <li>3 large organic apples</li>
+                <li>100 g almond powder</li>
+                <li>Maple syrup</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>Make the dough in a stand mixer with flour, sugar, melted butter and egg.</p>
+            <p>Let rest 1 hour then roll out and place in a tart tin on parchment paper.</p>
+            <p>Spread almond powder on the tart base and arrange apple slices on top.</p>
+            <p>Bake 30 minutes at 180°C. Glaze with a little maple syrup and bake 5 minutes more.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Deviled Eggs</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>6 eggs</li>
+                <li>3 tbsp mayonnaise</li>
+                <li>1 tsp mustard</li>
+                <li>Salt, pepper</li>
+                <li>Chives for garnish</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>Boil eggs for 10 minutes. Cool, peel and cut in half.</p>
+            <p>Remove yolks and mash with mayonnaise, mustard, salt and pepper.</p>
+            <p>Fill whites with the mixture and garnish with chives. Serve chilled.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Caesar Salad</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>1 romaine lettuce heart</li>
+                <li>150 g chicken fillets (or croutons)</li>
+                <li>Parmesan shavings</li>
+                <li>3 tbsp mayonnaise</li>
+                <li>1 tbsp lemon juice</li>
+                <li>1 garlic clove</li>
+                <li>Salt, pepper</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>Grill chicken fillets and slice. Wash and dry romaine lettuce.</p>
+            <p>Make the dressing by mixing mayonnaise, lemon juice, pressed garlic, salt and pepper.</p>
+            <p>Toss lettuce with chicken, parmesan and dressing. Add croutons if desired.</p>
+        </div>
+    </article>
+
+    <article class="recette-item">
+        <div class="ingredients">
+            <h2>Chocolate Mousse</h2>
+            <strong>Ingredients:</strong>
+            <ul>
+                <li>200 g dark chocolate</li>
+                <li>4 eggs (separate whites and yolks)</li>
+                <li>30 g sugar (optional)</li>
+                <li>A pinch of salt</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <strong>Preparation:</strong>
+            <p>Melt chocolate in a bain-marie and let cool slightly. Mix egg yolks into melted chocolate.</p>
+            <p>Whisk egg whites with a pinch of salt until stiff and gently fold into chocolate mixture.</p>
+            <p>Divide into dishes and chill at least 2 hours before serving.</p>
+        </div>
+    </article>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 My Cooking Site</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cooking Site - Home</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.parallax .overlay {
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 30px;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+#parallax1 { background-image: url('medias/fond3.jpg'); }
+#parallax2 { background-image: url('medias/fond4.jpg'); }
+
+section.content {
+    padding: 60px 20px;
+    background-color: #fffbe6;
+    text-align: center;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.lang-switch a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.lang-switch a:hover {
+    background-color: white;
+    color: #c0392b;
+}
+</style>
+</head>
+<body>
+
+<header id="parallax1" class="parallax">
+    <div class="overlay">
+        <h1>Welcome to My Cooking Site</h1>
+        <nav>
+            <ul>
+                <li><a href="acceuil-en.html">Home</a></li>
+                <li><a href="recettes-en.html">Recipes</a></li>
+                <li><a href="galerie-en.html">Gallery</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="acceuil.html">Français</a>
+        </div>
+    </div>
+</header>
+
+<section class="content">
+    <h2>About Cooking</h2>
+    <p>Discover tasty recipes, appetizing images, and inspiring videos to awaken your taste buds!</p>
+</section>
+
+<header id="parallax2" class="parallax">
+    <div class="overlay">
+        <h1>Explore Our Recipes and Galleries</h1>
+        <p>From starters to desserts, every dish tells a delicious story.</p>
+    </div>
+</header>
+
+<section class="content">
+    <p>Dive into the culinary universe and let yourself be inspired by our creations.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 My Cooking Site</p>
+</footer>
+
+</body>
+</html>

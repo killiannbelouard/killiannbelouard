@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - My Cooking Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: url('medias/fond3.jpg') center/cover no-repeat;
+        font-family: Arial, sans-serif;
+    }
+    .login-box {
+        background: rgba(0,0,0,0.6);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        max-width: 400px;
+        width: 90%;
+    }
+    .login-box h2 {
+        margin-bottom: 20px;
+        color: #f1c40f;
+    }
+    .login-box input {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border-radius: 5px;
+        border: none;
+    }
+    .login-box button, .login-box .manual-link {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #c0392b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .login-box button:hover, .login-box .manual-link:hover {
+        background: #e74c3c;
+    }
+    .note {
+        margin-top: 12px;
+        font-size: 0.9em;
+        color: #ffd7b3;
+    }
+
+    .lang-switch {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .lang-switch a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .lang-switch a:hover {
+        background-color: white;
+        color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="./index.html">Français</a>
+  </div>
+
+  <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username" autocomplete="username">
+      <input type="password" placeholder="Password" id="password" autocomplete="current-password">
+      <button type="button" id="loginBtn">Login</button>
+
+      <div class="note">
+        If automatic redirect fails, <a class="manual-link" href="./acceuil-en.html">click here to open home</a>.
+      </div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', function () {
+        const user = document.getElementById('username').value.trim();
+        const pass = document.getElementById('password').value.trim();
+        if (!user || !pass) {
+            alert("Please fill in username and password.");
+            return;
+        }
+        window.location.href = "./acceuil-en.html";
+    });
+  </script>
+</body>
+</html>
