@@ -6,23 +6,26 @@ Ce projet est un site web qui présente plusieurs recettes de cuisine.
 
 Le site présente plusieurs recettes de cuisine, dont :
 
-- Une tarte aux pommes
-- Un magret de canard au miel
-- Une pizza maison
-- autre avenir
+- Oeufs mimosa
+- Salade César
+- Magrets de cannar au miel
+- Pizza pepperoni
+- Tarte aux pommes
+- Mousse au chocolat
 
 Chaque recette contient :
-- Une photo du plat
 - Une liste d’ingrédients
 - Les étapes de préparation
+- Une photo du plat
+- Une vidéo pour préparer le plat
 
 Le site est entièrement réalisé en HTML et CSS sans JavaScript.
 
 ## Utilité
 
-Ce site peut être utilisé comme :
+Ce site peut être utilisé pour :
 
-- Pour apprendre à bien cuisiner
+- Apprendre à bien cuisiner
 - Suivre les préparations simples avec des vidéos à l’appui
 - Référence personnelle pour des recettes simples à réaliser
 
